@@ -26,11 +26,11 @@ SECRET_KEY = ')=8dgr%@p-!f0*km9(mrszpy2vnp!^sxh(hg+*vl22oeqm98j+'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-EMAIL_HOSTS = 'smtp.gmail.com'
-EMAIL_HOSTS_USER = 'programdebugtest@gmail.com'
-EMAIL_HOSTS_PASSWORD = '2ib2oIFrKl1z'
-EMAIL_PORT = 13759
-EMAIL_USE_TLS = True
+# EMAIL_HOSTS = 'smtp.gmail.com'
+# EMAIL_HOSTS_USER = 'programdebugtest@gmail.com'
+# EMAIL_HOSTS_PASSWORD = '2ib2oIFrKl1z'
+# EMAIL_PORT = 13759
+# EMAIL_USE_TLS = True
 
 
 
@@ -107,3 +107,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'root','static-files')
+
+STATICFILES_DIRS  = (
+    os.path.join(BASE_DIR,'files'),
+
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'root','dynamic-files')
